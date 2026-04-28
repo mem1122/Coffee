@@ -1,9 +1,4 @@
 async function signUp(){
-  if(useMock){
-    authMsg.innerText = "Mock регистрация";
-    return;
-  }
-
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
@@ -13,12 +8,6 @@ async function signUp(){
 }
 
 async function signIn(){
-  if(useMock){
-    auth.classList.add('hidden');
-    booking.classList.remove('hidden');
-    return;
-  }
-
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
@@ -27,7 +16,6 @@ async function signIn(){
   if(error){
     authMsg.innerText = error.message;
   } else {
-    auth.classList.add('hidden');
-    booking.classList.remove('hidden');
+    window.location.href = "bookings.html";
   }
 }
