@@ -1,5 +1,5 @@
-const SUPABASE_URL = "https://YOUR_PROJECT.supabase.co";
-const SUPABASE_KEY = "YOUR_ANON_KEY";
+const SUPABASE_URL = "https://tblhhwugigfgpqpidgoo.supabase.co";
+const SUPABASE_KEY = "sb_publishable_Q0YvhaPRlYhyo9JQy03Xbw_VZ2HdNyq";
 
 let supabaseClient = null;
 let useMock = false;
