@@ -6,14 +6,12 @@ async function book(){
     return;
   }
 
-  const { error } = await supabaseClient
-    .from('bookings')
-    .insert([{
-      user_id: data.user.id,
-      date: date.value,
-      time: time.value,
-      guests: guests.value
-    }]);
+  const { error } = await supabaseClient.from('bookings').insert([{
+    user_id: data.user.id,
+    date: date.value,
+    time: time.value,
+    guests: guests.value
+  }]);
 
   bookMsg.innerText = error ? error.message : "Бронь создана";
 }
